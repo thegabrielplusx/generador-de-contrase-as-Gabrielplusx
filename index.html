@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas - Gabriel Plusx</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/diseño.css">
+</head>
+<body>
+
+    <h1>GENERADOR DE<br>Contraseñas</h1>
+
+    <div class="container">
+        <div class="input-group">
+            <input type="text" id="password-display" readonly placeholder="...">
+            <button class="btn-generate" id="btn-generate">GENERAR</button>
+        </div>
+
+        <div class="length-control">
+            <span class="label-text">LONGITUD:</span>
+            <button class="length-btn" id="decrease">-</button>
+            <div class="length-display" id="length-val">12</div>
+            <button class="length-btn" id="increase">+</button>
+        </div>
+
+        <div class="options-download-row">
+            <div class="options">
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" id="chk-symbols" checked>
+                    <div class="custom-checkbox"></div>
+                    <span class="option-label">SÍMBOLOS</span>
+                </label>
+                
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" id="chk-numbers" checked>
+                    <div class="custom-checkbox"></div>
+                    <span class="option-label">NÚMEROS</span>
+                </label>
+
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" id="chk-upper" checked>
+                    <div class="custom-checkbox"></div>
+                    <span class="option-label">MAYÚSCULAS</span>
+                </label>
+            </div>
+
+
+            <button class="btn-download" id="btn-download">
+                DESCARGAR<br>ARCHIVO
+            </button>
+        </div>
+    </div>
+    
+    <a href="https://github.com/thegabrielplusx/" target="_blank" style="text-decoration: none;">
+        <div class="footer">
+            <div class="avatar">
+                <img src="../img/autor.png" alt="Avatar">
+            </div>
+            
+            <div class="brand-name">GABRIEL PLUSX</div>
+        </div>
+    </a>
+    <script src="../js/logica.js"></script>
+</body>
+</html>
