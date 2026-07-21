@@ -3,22 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de Contraseñas - Gabriel Plusx</title>
+    <title data-i18n="title">Generador de Contraseñas - Gabriel Plusx</title>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="diseño.css">
 </head>
 <body>
 
-    <h1>GENERADOR DE<br>Contraseñas</h1>
+    <div style="text-align: right; padding: 10px;">
+        <select id="lang-select" style="padding: 5px; border-radius: 5px; font-family: 'Roboto', sans-serif; cursor: pointer;">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="eo">Esperanto</option>
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="pt-pt">Português (Portugal)</option>
+             <option value="de-ch">Deutscher aus der Schweiz</option>
+        </select>
+    </div>
+
+    <h1 data-i18n="h1">GENERADOR DE<br>Contraseñas</h1>
 
     <div class="container">
         <div class="input-group">
             <input type="text" id="password-display" readonly placeholder="...">
-            <button class="btn-generate" id="btn-generate">GENERAR</button>
+            <button class="btn-generate" id="btn-generate" data-i18n="btn_generate">GENERAR</button>
         </div>
 
         <div class="length-control">
-            <span class="label-text">LONGITUD:</span>
+            <span class="label-text" data-i18n="length">LONGITUD:</span>
             <button class="length-btn" id="decrease">-</button>
             <div class="length-display" id="length-val">12</div>
             <button class="length-btn" id="increase">+</button>
@@ -29,24 +40,24 @@
                 <label class="checkbox-wrapper">
                     <input type="checkbox" id="chk-symbols" checked>
                     <div class="custom-checkbox"></div>
-                    <span class="option-label">SÍMBOLOS</span>
+                    <span class="option-label" data-i18n="symbols">SÍMBOLOS</span>
                 </label>
                 
                 <label class="checkbox-wrapper">
                     <input type="checkbox" id="chk-numbers" checked>
                     <div class="custom-checkbox"></div>
-                    <span class="option-label">NÚMEROS</span>
+                    <span class="option-label" data-i18n="numbers">NÚMEROS</span>
                 </label>
 
                 <label class="checkbox-wrapper">
                     <input type="checkbox" id="chk-upper" checked>
                     <div class="custom-checkbox"></div>
-                    <span class="option-label">MAYÚSCULAS</span>
+                    <span class="option-label" data-i18n="upper">MAYÚSCULAS</span>
                 </label>
             </div>
 
 
-            <button class="btn-download" id="btn-download">
+            <button class="btn-download" id="btn-download" data-i18n="btn_download">
                 DESCARGAR<br>ARCHIVO
             </button>
         </div>
@@ -55,7 +66,7 @@
     <a href="https://github.com/thegabrielplusx/" target="_blank" style="text-decoration: none;">
         <div class="footer">
             <div class="avatar">
-                <img src="autor.png" alt="Avatar">
+                <img id="autor-img" src="autor.png" alt="Avatar">
             </div>
             
             <div class="brand-name">GABRIEL PLUSX</div>
@@ -63,5 +74,4 @@
     </a>
     <script src="logica.js"></script>
 </body>
-
 </html>
